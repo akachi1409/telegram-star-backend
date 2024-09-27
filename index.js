@@ -10,7 +10,7 @@ app.use(express.json());
 console.log(process.env.TELEGRAM_BOT_TOKEN)
 const bot = new Bot(process.env.TELEGRAM_BOT_TOKEN); // Your bot token
 
-app.post("/generate-invoice", async (req, res) => {
+app.get("/generate-invoice", async (req, res) => {
   const title = "Test Product";
   const description = "Test description";
   const payload = "{}";
